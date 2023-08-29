@@ -1,0 +1,4 @@
+set -xv
+bash echo-genfile.sh
+bash dumpline.sh file-double-quotes-e.txt
+bash dumpline-all.sh file-double-quotes-e.txt
