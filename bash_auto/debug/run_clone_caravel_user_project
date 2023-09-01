@@ -2,11 +2,14 @@
 
 set -x # echo on for debug 
 
-# setup your main floder
+# setup your main floder(MF)
 export MF=/home/tonyho/workspace/debug/debug_caravel_user_project
 
+# setup your log floder(LF)
 export LF=$MF/log
+# setup your caravel-lab floder(CLF)
 export CLF=$MF/caravel-lab
+# setup your caravel_user_project floder(CUPF)
 export CUPF=$MF/caravel_user_project
 
 cd $MF
