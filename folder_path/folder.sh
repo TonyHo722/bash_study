@@ -3,11 +3,11 @@
 set -x # echo on for debug
 
 # setup your main floder(MF)
-MF="/home/tonyho/workspace/debug"
+MF=/home/tonyho/workspace/debug
 
-LF="$MF/folder_test_log"
-CLF="$MF/test1"
-CUPF="$MF/test2"
+LF=$MF/folder_test_log
+CLF=$MF/test1
+CUPF=$MF/test2
 
 if [ ! -d "$MF" ];
 then
@@ -20,7 +20,7 @@ pwd
 
 
 
-if [ -d "$LF" ];
+if [ -d $LF ];
 then
     rm -rf $LF
 fi
@@ -38,7 +38,7 @@ then
 fi
 mkdir $CUPF
 
-ls  2>&1 | tee "$LF/ls.log"
+ls  2>&1 | tee $LF/ls.log
 
 
 cd $CLF
