@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -x # echo on
+set -x # echo on for debug 
 
 # setup your main floder
 export MF=/home/tonyho/workspace/debug/debug_caravel_user_project
