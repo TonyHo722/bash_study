@@ -18,6 +18,42 @@ cd $MF
 pwd
 
 
+mkdir $LF
+ls $LF
+if [ -d "$LF" ] ;
+then 
+    echo "with double-quote: ture"
+else
+    echo "with double-quote: false"
+fi
+
+if [ -d $LF ] ;
+then 
+    echo "without double-quote: ture"
+else
+    echo "without double-quote: false"
+fi
+
+rm -rf $LF
+ls $LF
+
+if [ -d "$LF" ] ;
+then 
+    echo "with double-quote: ture"
+else
+    echo "with double-quote: false"
+fi
+
+if [ -d $LF ] ;
+then 
+    echo "without double-quote: ture"
+else
+    echo "without double-quote: false"
+fi
+
+
+
+
 
 
 [ -d $LF ] && echo "found $LF exist, remove it" && rm -rf $LF
