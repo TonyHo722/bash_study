@@ -20,10 +20,7 @@ pwd
 
 
 
-if [ -d $LF ];
-then
-    rm -rf $LF
-fi
+[ -d $LF ] && echo "found $LF exist, remove it" && rm -rf $LF
 mkdir $LF
 
 if [ -d "$CLF" ];
