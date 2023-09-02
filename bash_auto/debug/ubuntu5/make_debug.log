@@ -1,0 +1,526 @@
++ export MF=/home/tonyho/workspace/debug/make_debug
++ MF=/home/tonyho/workspace/debug/make_debug
++ export LF=/home/tonyho/workspace/debug/make_debug/log
++ LF=/home/tonyho/workspace/debug/make_debug/log
++ export CLF=/home/tonyho/workspace/debug/make_debug/caravel-lab
++ CLF=/home/tonyho/workspace/debug/make_debug/caravel-lab
++ export CUPF=/home/tonyho/workspace/debug/make_debug/caravel_user_project
++ CUPF=/home/tonyho/workspace/debug/make_debug/caravel_user_project
++ cd /home/tonyho/workspace/debug/make_debug
++ '[' '!' -d /home/tonyho/workspace/debug/make_debug ']'
++ '[' '!' -d /home/tonyho/workspace/debug/make_debug/log ']'
++ echo '/home/tonyho/workspace/debug/make_debug/log not exist, create it'
+/home/tonyho/workspace/debug/make_debug/log not exist, create it
++ mkdir /home/tonyho/workspace/debug/make_debug/log
++ '[' '!' -d /home/tonyho/workspace/debug/make_debug/caravel-lab ']'
++ echo '/home/tonyho/workspace/debug/make_debug/caravel-lab not exist, git clone it'
+/home/tonyho/workspace/debug/make_debug/caravel-lab not exist, git clone it
++ git clone https://github.com/bol-edu/caravel-lab
+Cloning into 'caravel-lab'...
++ '[' '!' -d /home/tonyho/workspace/debug/make_debug/caravel_user_project ']'
++ echo '/home/tonyho/workspace/debug/make_debug/caravel_user_project not exist, git clone it'
+/home/tonyho/workspace/debug/make_debug/caravel_user_project not exist, git clone it
++ git clone -b mpw-8c https://github.com/efabless/caravel_user_project
+Cloning into 'caravel_user_project'...
+Note: switching to 'bae93e078005210307b7530e53d4a0c060ed5c54'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
++ cd /home/tonyho/workspace/debug/make_debug/caravel_user_project
++ git log -1
++ tee /home/tonyho/workspace/debug/make_debug/log/mpw-8c-git-log.log
+commit bae93e078005210307b7530e53d4a0c060ed5c54
+Author: Jeff DiCorpo <42048757+jeffdi@users.noreply.github.com>
+Date:   Fri Nov 25 11:53:53 2022 -0800
+
+    tag = mpw-8c
++ mkdir dependencies
+++ pwd
++ export OPENLANE_ROOT=/home/tonyho/workspace/debug/make_debug/caravel_user_project/dependencies/openlane_src
++ OPENLANE_ROOT=/home/tonyho/workspace/debug/make_debug/caravel_user_project/dependencies/openlane_src
+++ pwd
++ export PDK_ROOT=/home/tonyho/workspace/debug/make_debug/caravel_user_project/dependencies/pdks
++ PDK_ROOT=/home/tonyho/workspace/debug/make_debug/caravel_user_project/dependencies/pdks
++ export PDK=sky130A
++ PDK=sky130A
++ make -dn setup
++ tee /home/tonyho/workspace/debug/make_debug/log/mpw-8c-make-steup.log
+GNU Make 4.2.1
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Reading makefiles...
+Reading makefile 'Makefile'...
+Updating makefiles....
+ Considering target file 'Makefile'.
+  Looking for an implicit rule for 'Makefile'.
+  Trying pattern rule with stem 'Makefile'.
+  Found an implicit rule for 'Makefile'.
+  Finished prerequisites of target file 'Makefile'.
+ No need to remake target 'Makefile'.
+Updating goal targets....
+Considering target file 'setup'.
+ File 'setup' does not exist.
+  Considering target file 'install'.
+   File 'install' does not exist.
+   Finished prerequisites of target file 'install'.
+  Must remake target 'install'.
+if [ -d "/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel" ]; then\
+	echo "Deleting exisiting /home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel" && \
+	rm -rf /home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel && sleep 2;\
+fi
+echo "Installing caravel-lite.."
+git clone -b mpw-8c https://github.com/efabless/caravel-lite /home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel --depth=1
+  Successfully remade target file 'install'.
+  Considering target file 'check-env'.
+   File 'check-env' does not exist.
+   Looking for an implicit rule for 'check-env'.
+   Trying pattern rule with stem 'check-env'.
+   Found an implicit rule for 'check-env'.
+   Finished prerequisites of target file 'check-env'.
+  Must remake target 'check-env'.
+export CARAVEL_ROOT=/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel && make -f /home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile check-env
+Putting child 0x55ecefaeda20 (check-env) PID 745172 on the chain.
+Live child 0x55ecefaeda20 (check-env) PID 745172 
+GNU Make 4.2.1
+Built for x86_64-pc-linux-gnu
+Copyright (C) 1988-2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+Reading makefiles...
+Reading makefile '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile'...
+make[1]: Entering directory '/home/tonyho/workspace/debug/make_debug/caravel_user_project'
+make[1]: /home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile: No such file or directory
+Updating makefiles....
+ Considering target file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile'.
+  File '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile' does not exist.
+  Looking for an implicit rule for '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.o'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.c'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cc'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.C'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cpp'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.p'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.f'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.m'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.s'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.mod'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.sh'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile,v'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile,v'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.o'.
+  Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.o'.
+   Avoiding implicit rule recursion.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.c'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cc'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.C'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cpp'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.p'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.f'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.m'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.s'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.mod'.
+   Trying pattern rule with stem 'Makefile.o'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.o,v'.
+   Trying pattern rule with stem 'Makefile.o'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.o,v'.
+   Trying pattern rule with stem 'Makefile.o'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.o'.
+   Trying pattern rule with stem 'Makefile.o'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.o'.
+   Trying pattern rule with stem 'Makefile.o'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.o'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.c'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.c'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.y'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.l'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.w'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.w'.
+    Trying pattern rule with stem 'Makefile.c'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.c,v'.
+    Trying pattern rule with stem 'Makefile.c'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.c,v'.
+    Trying pattern rule with stem 'Makefile.c'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.c'.
+    Trying pattern rule with stem 'Makefile.c'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.c'.
+    Trying pattern rule with stem 'Makefile.c'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.c'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.y'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.y'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile.y'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.y,v'.
+     Trying pattern rule with stem 'Makefile.y'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.y,v'.
+     Trying pattern rule with stem 'Makefile.y'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.y'.
+     Trying pattern rule with stem 'Makefile.y'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.y'.
+     Trying pattern rule with stem 'Makefile.y'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.y'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.l'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.l'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile.l'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.l,v'.
+     Trying pattern rule with stem 'Makefile.l'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.l,v'.
+     Trying pattern rule with stem 'Makefile.l'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.l'.
+     Trying pattern rule with stem 'Makefile.l'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.l'.
+     Trying pattern rule with stem 'Makefile.l'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.l'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.w'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.w'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile.w'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.w,v'.
+     Trying pattern rule with stem 'Makefile.w'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.w,v'.
+     Trying pattern rule with stem 'Makefile.w'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.w'.
+     Trying pattern rule with stem 'Makefile.w'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.w'.
+     Trying pattern rule with stem 'Makefile.w'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.w'.
+    Trying pattern rule with stem 'Makefile'.
+    Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.w'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cc'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cc'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile.cc'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cc,v'.
+    Trying pattern rule with stem 'Makefile.cc'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.cc,v'.
+    Trying pattern rule with stem 'Makefile.cc'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.cc'.
+    Trying pattern rule with stem 'Makefile.cc'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.cc'.
+    Trying pattern rule with stem 'Makefile.cc'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.cc'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.C'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.C'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile.C'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.C,v'.
+    Trying pattern rule with stem 'Makefile.C'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.C,v'.
+    Trying pattern rule with stem 'Makefile.C'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.C'.
+    Trying pattern rule with stem 'Makefile.C'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.C'.
+    Trying pattern rule with stem 'Makefile.C'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.C'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cpp'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cpp'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile.cpp'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cpp,v'.
+    Trying pattern rule with stem 'Makefile.cpp'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.cpp,v'.
+    Trying pattern rule with stem 'Makefile.cpp'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.cpp'.
+    Trying pattern rule with stem 'Makefile.cpp'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.cpp'.
+    Trying pattern rule with stem 'Makefile.cpp'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.cpp'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.p'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.p'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.web'.
+    Trying pattern rule with stem 'Makefile.p'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.p,v'.
+    Trying pattern rule with stem 'Makefile.p'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.p,v'.
+    Trying pattern rule with stem 'Makefile.p'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.p'.
+    Trying pattern rule with stem 'Makefile.p'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.p'.
+    Trying pattern rule with stem 'Makefile.p'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.p'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.web'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.web'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile.web'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.web,v'.
+     Trying pattern rule with stem 'Makefile.web'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.web,v'.
+     Trying pattern rule with stem 'Makefile.web'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.web'.
+     Trying pattern rule with stem 'Makefile.web'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.web'.
+     Trying pattern rule with stem 'Makefile.web'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.web'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.f'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.f'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r'.
+    Trying pattern rule with stem 'Makefile.f'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.f,v'.
+    Trying pattern rule with stem 'Makefile.f'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.f,v'.
+    Trying pattern rule with stem 'Makefile.f'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.f'.
+    Trying pattern rule with stem 'Makefile.f'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.f'.
+    Trying pattern rule with stem 'Makefile.f'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.f'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile.F'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F,v'.
+     Trying pattern rule with stem 'Makefile.F'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.F,v'.
+     Trying pattern rule with stem 'Makefile.F'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.F'.
+     Trying pattern rule with stem 'Makefile.F'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.F'.
+     Trying pattern rule with stem 'Makefile.F'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.F'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile'.
+     Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.l'.
+     Trying pattern rule with stem 'Makefile.r'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r,v'.
+     Trying pattern rule with stem 'Makefile.r'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.r,v'.
+     Trying pattern rule with stem 'Makefile.r'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.r'.
+     Trying pattern rule with stem 'Makefile.r'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.r'.
+     Trying pattern rule with stem 'Makefile.r'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.r'.
+   Trying pattern rule with stem 'Makefile'.
+   Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.m'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.m'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.ym'.
+    Trying pattern rule with stem 'Makefile.m'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.m,v'.
+    Trying pattern rule with stem 'Makefile.m'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.m,v'.
+    Trying pattern rule with stem 'Makefile.m'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.m'.
+    Trying pattern rule with stem 'Makefile.m'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.m'.
+    Trying pattern rule with stem 'Makefile.m'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.m'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.ym'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.ym'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile.ym'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.ym,v'.
+     Trying pattern rule with stem 'Makefile.ym'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.ym,v'.
+     Trying pattern rule with stem 'Makefile.ym'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.ym'.
+     Trying pattern rule with stem 'Makefile.ym'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.ym'.
+     Trying pattern rule with stem 'Makefile.ym'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.ym'.
+   Trying pattern rule with stem 'Makefile'.
+   Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.s'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.s'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S'.
+    Trying pattern rule with stem 'Makefile.s'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.s,v'.
+    Trying pattern rule with stem 'Makefile.s'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.s,v'.
+    Trying pattern rule with stem 'Makefile.s'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.s'.
+    Trying pattern rule with stem 'Makefile.s'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.s'.
+    Trying pattern rule with stem 'Makefile.s'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.s'.
+    Trying pattern rule with stem 'Makefile'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S'.
+    Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S'.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Avoiding implicit rule recursion.
+     Trying pattern rule with stem 'Makefile.S'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S,v'.
+     Trying pattern rule with stem 'Makefile.S'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.S,v'.
+     Trying pattern rule with stem 'Makefile.S'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.S'.
+     Trying pattern rule with stem 'Makefile.S'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.S'.
+     Trying pattern rule with stem 'Makefile.S'.
+     Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.S'.
+   Trying pattern rule with stem 'Makefile'.
+   Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S'.
+   Trying pattern rule with stem 'Makefile'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.mod'.
+   Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.mod'.
+    Avoiding implicit rule recursion.
+    Avoiding implicit rule recursion.
+    Trying pattern rule with stem 'Makefile.mod'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.mod,v'.
+    Trying pattern rule with stem 'Makefile.mod'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.mod,v'.
+    Trying pattern rule with stem 'Makefile.mod'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.mod'.
+    Trying pattern rule with stem 'Makefile.mod'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.mod'.
+    Trying pattern rule with stem 'Makefile.mod'.
+    Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.mod'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.c'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cc'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.C'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.cpp'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.p'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.f'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.F'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.m'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.r'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.s'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.S'.
+  Trying pattern rule with stem 'Makefile'.
+  Rejecting impossible implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.mod'.
+  Trying pattern rule with stem 'Makefile'.
+  Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.sh'.
+  Looking for a rule with intermediate file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.sh'.
+   Avoiding implicit rule recursion.
+   Trying pattern rule with stem 'Makefile.sh'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile.sh,v'.
+   Trying pattern rule with stem 'Makefile.sh'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.sh,v'.
+   Trying pattern rule with stem 'Makefile.sh'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/RCS/Makefile.sh'.
+   Trying pattern rule with stem 'Makefile.sh'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/s.Makefile.sh'.
+   Trying pattern rule with stem 'Makefile.sh'.
+   Trying implicit prerequisite '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/SCCS/s.Makefile.sh'.
+  No implicit rule found for '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile'.
+  Finished prerequisites of target file '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile'.
+ Must remake target '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile'.
+make[1]: *** No rule to make target '/home/tonyho/workspace/debug/make_debug/caravel_user_project/caravel/Makefile'.  Stop.
+make[1]: Leaving directory '/home/tonyho/workspace/debug/make_debug/caravel_user_project'
+Reaping losing child 0x55ecefaeda20 PID 745172 
+make: *** [Makefile:84: check-env] Error 2
+Removing child 0x55ecefaeda20 PID 745172 from chain.
