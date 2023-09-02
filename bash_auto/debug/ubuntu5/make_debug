@@ -1,0 +1,33 @@
+#!/bin/bash
+
+set -x # echo on for debug 
+
+# setup your main floder(MF)
+export MF=/home/tonyho/workspace/debug/make_debug
+
+# setup your log floder(LF)
+export LF=$MF/log
+# setup your caravel-lab floder(CLF)
+export CLF=$MF/caravel-lab
+# setup your caravel_user_project floder(CUPF)
+export CUPF=$MF/caravel_user_project
+
+cd $MF
+if [ ! -d "$MF" ] ;
+then
+    echo "$MF not exist, please create it"
+    exit 1
+fi    
+
+[ ! -d $LF ] && echo "$LF not exist, create it" && mkdir $LF
+[ ! -d $CLF ] && echo "$CLF not exist, git clone it" && git clone https://github.com/bol-edu/caravel-lab
+[ ! -d $CUPF ] && echo "$CUPF not exist, git clone it" && git clone -b mpw-8c https://github.com/efabless/caravel_user_project
+
+cd $CUPF
+git log -1 2>&1 | tee $LF/mpw-8c-git-log.log
+mkdir dependencies
+export OPENLANE_ROOT=$(pwd)/dependencies/openlane_src
+export PDK_ROOT=$(pwd)/dependencies/pdks
+export PDK=sky130A
+
+make -dn setup 2>&1 | tee $LF/mpw-8c-make-steup.log
