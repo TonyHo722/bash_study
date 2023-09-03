@@ -1,0 +1,7 @@
+Already up to date.
+. ./venv/bin/activate && \
+	python3 -m pip install --upgrade pip && \
+	python3 -m pip install -r /SSD2T/debug/d4_caravel_user_project/caravel_user_project/deps/timing-scripts/requirements.txt && \
+	deactivate
+Requirement already satisfied: pip in ./venv/lib/python3.9/site-packages (23.2.1)
+Requirement already satisfied: click in ./venv/lib/python3.9/site-packages (from -r /SSD2T/debug/d4_caravel_user_project/caravel_user_project/deps/timing-scripts/requirements.txt (line 1)) (8.1.7)

@@ -1,0 +1,5 @@
+docker pull efabless/dv:latest
+latest: Pulling from efabless/dv
+Digest: sha256:06497b070c8578fbbe87170c9f4dfa61c2c9a9d9f665a637c4d822ea98a7f1b7
+Status: Image is up to date for efabless/dv:latest
+docker.io/efabless/dv:latest

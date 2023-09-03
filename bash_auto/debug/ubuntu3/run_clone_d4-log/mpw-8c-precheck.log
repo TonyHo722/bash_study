@@ -1,0 +1,2 @@
+fatal: destination path '/home/tonyho/mpw_precheck' already exists and is not an empty directory.
+make: *** [Makefile:216: precheck] Error 128

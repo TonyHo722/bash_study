@@ -1,0 +1,166 @@
+cd /home/tonyho/mpw_precheck && \
+docker run -v /home/tonyho/mpw_precheck:/home/tonyho/mpw_precheck \
+-v /SSD2T/debug/d4_caravel_user_project/caravel_user_project:/SSD2T/debug/d4_caravel_user_project/caravel_user_project \
+-v /SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/pdks:/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/pdks \
+-e INPUT_DIRECTORY=/SSD2T/debug/d4_caravel_user_project/caravel_user_project \
+-e PDK_PATH=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/pdks/sky130A \
+-e PDK_ROOT=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/pdks \
+-e PDKPATH=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/pdks/sky130A \
+-u 1000:1000 \
+efabless/mpw_precheck:latest bash -c "cd /home/tonyho/mpw_precheck ; python3 mpw_precheck.py --input_directory /SSD2T/debug/d4_caravel_user_project/caravel_user_project --pdk_path /SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/pdks/sky130A"
+{{EXTRACTING FILES}} Extracting compressed files in: /SSD2T/debug/d4_caravel_user_project/caravel_user_project
+{{Project Type Info}} digital
+{{Project GDS Info}} user_project_wrapper: 904698ed2386034bbf4e1ec2c2adca5144897bc4
+{{Tools Info}} KLayout: v0.27.13 | Magic: v8.3.420
+{{PDKs Info}} SKY130A: f70d8ca46961ff92719d8870a18a076370b85f6c | Open PDKs: 0059588eebfc704681dc2368bd1d33d96281d10f
+{{START}} Precheck Started, the full log 'precheck.log' will be located in '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs'
+{{PRECHECK SEQUENCE}} Precheck will run the following checks: [License, Makefile, Default, Documentation, Consistency, GPIO-Defines, XOR, Magic DRC, Klayout FEOL, Klayout BEOL, Klayout Offgrid, Klayout Metal Minimum Clear Area Density, Klayout Pin Label Purposes Overlapping Drawing, Klayout ZeroArea]
+{{STEP UPDATE}} Executing Check 1 of 14: License
+An approved LICENSE (Apache-2.0) was found in /SSD2T/debug/d4_caravel_user_project/caravel_user_project.
+{{MAIN LICENSE CHECK PASSED}} An approved LICENSE was found in project root.
+An approved LICENSE (Apache-2.0) was found in /SSD2T/debug/d4_caravel_user_project/caravel_user_project.
+An approved LICENSE (Apache-2.0) was found in /SSD2T/debug/d4_caravel_user_project/caravel_user_project.
+An approved LICENSE (Apache-2.0) was found in /SSD2T/debug/d4_caravel_user_project/caravel_user_project.
+An approved LICENSE (Apache-2.0) was found in /SSD2T/debug/d4_caravel_user_project/caravel_user_project.
+An approved LICENSE (Apache-2.0) was found in /SSD2T/debug/d4_caravel_user_project/caravel_user_project.
+{{SUBMODULES LICENSE CHECK PASSED}} No prohibited LICENSE file(s) was found in project submodules
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools/gui-64.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools/gui-32.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools/cli.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools/cli-64.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools/gui.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools/cli-32.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/pip/_vendor/distlib/t64.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/pip/_vendor/distlib/w32.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/pip/_vendor/distlib/w64.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/pip/_vendor/distlib/t64-arm.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/pip/_vendor/distlib/w64-arm.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/pip/_vendor/distlib/t32.exe): 'utf-8' codec can't decode byte 0x90 in position 2: invalid start byte
+SPDX COMPLIANCE SYMLINK FILE NOT FOUND in /SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/bin/python3.9
+SPDX COMPLIANCE SYMLINK FILE NOT FOUND in /SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/bin/python
+SPDX COMPLIANCE SYMLINK FILE NOT FOUND in /SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/bin/python3
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/9-user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/floorplan/4-io.macro_placement.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/floorplan/6-pdn.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/floorplan/3-initial_fp.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/floorplan/4-io.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/routing/11-global.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/routing/diode.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/tmp/placement/7-global.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/results/routing/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_12_29/results/placement/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/9-user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/floorplan/4-io.macro_placement.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/floorplan/6-pdn.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/floorplan/3-initial_fp.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/floorplan/4-io.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/routing/11-global.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/routing/diode.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/tmp/placement/7-global.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/results/routing/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_project_wrapper/runs/23_09_02_20_43/results/placement/user_project_wrapper.odb): 'utf-8' codec can't decode byte 0xba in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/12-user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/cts/11-user_proj_example.resized.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/floorplan/6-pdn.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/floorplan/3-initial_fp.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/floorplan/4-io.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/routing/diodes.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/routing/16-global.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/routing/13-diodes.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/routing/15-fill.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/placement/7-global.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/tmp/placement/8-resizer.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/results/cts/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/results/floorplan/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/results/routing/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_20_23/results/placement/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/12-user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/cts/11-user_proj_example.resized.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/floorplan/6-pdn.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/floorplan/3-initial_fp.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/floorplan/4-io.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/routing/diodes.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/routing/16-global.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/routing/13-diodes.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/routing/15-fill.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/placement/7-global.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/tmp/placement/8-resizer.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/results/cts/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/results/floorplan/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/results/routing/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane/user_proj_example/runs/23_09_02_12_09/results/placement/user_proj_example.odb): 'utf-8' codec can't decode byte 0xb9 in position 16: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper/verilog/rtl/ibex/sv-source-orig/sv2v): 'utf-8' codec can't decode byte 0xcf in position 0: invalid continuation byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper/verilog/dv/tests-standalone/spi_master/spi_master.vcd.hier): 'utf-8' codec can't decode byte 0xfc in position 0: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper/lvs/utils/vlog2Spice): 'utf-8' codec can't decode byte 0xf8 in position 96: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper/lvs/examples/utils/vlog2Spice): 'utf-8' codec can't decode byte 0xf8 in position 96: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src/docs/_static/striVe.jpeg): 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src/docs/_static/src/lvs_issue_comparison.xcf): 'utf-8' codec can't decode byte 0x96 in position 29: invalid start byte
+SPDX COMPLIANCE FILE UNICODE DECODE EXCEPTION in (/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src/docs/_static/src/ring_around_macro.xcf): 'utf-8' codec can't decode byte 0x8d in position 21: invalid start byte
+{{SPDX COMPLIANCE CHECK FAILED}} Found 6299 non-compliant file(s) with the SPDX Standard.
+SPDX COMPLIANCE: NON-COMPLIANT FILE(S) PREVIEW: ['/SSD2T/debug/d4_caravel_user_project/caravel_user_project/spef/user_project_wrapper.spef', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/spef/user_proj_example.spef', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/spef/multicorner/user_project_wrapper.min.spef', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/spef/multicorner/user_project_wrapper.max.spef', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/spef/multicorner/user_project_wrapper.nom.spef', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/lib/user_project_wrapper.lib', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/lib/user_proj_example.lib', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/distutils-precedence.pth', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/click-8.1.7.dist-info/METADATA', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/click-8.1.7.dist-info/INSTALLER', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/click-8.1.7.dist-info/LICENSE.rst', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/click-8.1.7.dist-info/WHEEL', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/click-8.1.7.dist-info/RECORD', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools-56.0.0.dist-info/METADATA', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/venv/lib/python3.9/site-packages/setuptools-56.0.0.dist-info/INSTALLER']
+For the full SPDX compliance report check: /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs/spdx_compliance_report.log
+{{STEP UPDATE}} Executing Check 2 of 14: Makefile
+{{MAKEFILE CHECK PASSED}} Makefile valid.
+{{STEP UPDATE}} Executing Check 3 of 14: Default
+{{README DEFAULT CHECK PASSED}} Project 'README.md' was modified and is not identical to the default 'README.md'
+{{CONTENT DEFAULT CHECK PASSED}} Project 'gds' was modified and is not identical to the default 'gds'
+{{STEP UPDATE}} Executing Check 4 of 14: Documentation
+{{DOCUMENTATION CHECK PASSED}} Project documentation is appropriate.
+{{STEP UPDATE}} Executing Check 5 of 14: Consistency
+Instance caravel_logo isn't connected to any of the nets: ['vccd_core', 'vccd1_core', 'vccd2_core', 'vdda1_core', 'vdda2_core', 'vssa_core', 'vssa1_core', 'vssa2_core', 'vssd_core', 'vssd1_core', 'vssd2_core'] .
+POWER CONNECTIONS CHECK FAILED: Not all instances in caravel are connected to power
+{{NETLIST CONSISTENCY CHECK FAILED}} caravel netlist failed 1 consistency check(s): ['POWER'].
+PORTS CHECK PASSED: Netlist user_project_wrapper ports match the golden wrapper ports
+COMPLEXITY CHECK PASSED: Netlist user_project_wrapper contains at least 1 instances (1 instances). 
+MODELING CHECK PASSED: Netlist user_project_wrapper is structural.
+LAYOUT CHECK PASSED: The GDS layout for user_project_wrapper matches the provided structural netlist.
+POWER CONNECTIONS CHECK PASSED: All instances in user_project_wrapper are connected to power
+PORT TYPES CHECK PASSED: Netlist user_project_wrapper port types match the golden wrapper port types.
+{{NETLIST CONSISTENCY CHECK PASSED}} user_project_wrapper netlist passed all consistency checks.
+{{CONSISTENCY CHECK FAILED}} The user netlist and the top netlist are not valid.
+{{STEP UPDATE}} Executing Check 6 of 14: GPIO-Defines
+GPIO-DEFINES: Checking verilog/rtl/user_defines.v, parsing files: ['/home/tonyho/mpw_precheck/checks/gpio_defines_check/verilog_assets/gpio_modes_base.v', '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/verilog/rtl/user_defines.v', '/home/tonyho/mpw_precheck/checks/gpio_defines_check/verilog_assets/gpio_modes_observe.v']
+GPIO-DEFINES report path: /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/reports/gpio_defines.report
+{{GPIO-DEFINES CHECK PASSED}} The user verilog/rtl/user_defines.v is valid.
+{{STEP UPDATE}} Executing Check 7 of 14: XOR
+{{XOR CHECK UPDATE}} Total XOR differences: 0, for more details view /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/user_project_wrapper.xor.gds
+{{XOR CHECK PASSED}} The GDS file has no XOR violations.
+{{STEP UPDATE}} Executing Check 8 of 14: Magic DRC
+Found 0 violations
+0 DRC violations
+{{MAGIC DRC CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+{{STEP UPDATE}} Executing Check 9 of 14: Klayout FEOL
+in CUSTOM klayout_gds_drc_check
+run: klayout -b -r /home/tonyho/mpw_precheck/checks/tech-files/sky130A_mr.drc -rd input=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/reports/klayout_feol_check.xml -rd feol=true >& /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs/klayout_feol_check.log
+No DRC Violations found
+{{Klayout FEOL CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+{{STEP UPDATE}} Executing Check 10 of 14: Klayout BEOL
+in CUSTOM klayout_gds_drc_check
+run: klayout -b -r /home/tonyho/mpw_precheck/checks/tech-files/sky130A_mr.drc -rd input=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/reports/klayout_beol_check.xml -rd beol=true >& /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs/klayout_beol_check.log
+No DRC Violations found
+{{Klayout BEOL CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+{{STEP UPDATE}} Executing Check 11 of 14: Klayout Offgrid
+in CUSTOM klayout_gds_drc_check
+run: klayout -b -r /home/tonyho/mpw_precheck/checks/tech-files/sky130A_mr.drc -rd input=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/reports/klayout_offgrid_check.xml -rd offgrid=true >& /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs/klayout_offgrid_check.log
+No DRC Violations found
+{{Klayout Offgrid CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+{{STEP UPDATE}} Executing Check 12 of 14: Klayout Metal Minimum Clear Area Density
+in CUSTOM klayout_gds_drc_check
+run: klayout -b -r /home/tonyho/mpw_precheck/checks/drc_checks/klayout/met_min_ca_density.lydrc -rd input=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/reports/klayout_met_min_ca_density_check.xml >& /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs/klayout_met_min_ca_density_check.log
+No DRC Violations found
+{{Klayout Metal Minimum Clear Area Density CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+{{STEP UPDATE}} Executing Check 13 of 14: Klayout Pin Label Purposes Overlapping Drawing
+in CUSTOM klayout_gds_drc_check
+run: klayout -b -r /home/tonyho/mpw_precheck/checks/drc_checks/klayout/pin_label_purposes_overlapping_drawing.rb.drc -rd input=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/reports/klayout_pin_label_purposes_overlapping_drawing_check.xml -rd top_cell_name=user_project_wrapper >& /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs/klayout_pin_label_purposes_overlapping_drawing_check.log
+No DRC Violations found
+{{Klayout Pin Label Purposes Overlapping Drawing CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+{{STEP UPDATE}} Executing Check 14 of 14: Klayout ZeroArea
+in CUSTOM klayout_gds_drc_check
+run: klayout -b -r /home/tonyho/mpw_precheck/checks/drc_checks/klayout/zeroarea.rb.drc -rd input=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/gds/user_project_wrapper.gds -rd topcell=user_project_wrapper -rd report=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/reports/klayout_zeroarea_check.xml -rd cleaned_output=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/outputs/user_project_wrapper_no_zero_areas.gds >& /SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs/klayout_zeroarea_check.log
+No DRC Violations found
+{{Klayout ZeroArea CHECK PASSED}} The GDS file, user_project_wrapper.gds, has no DRC violations.
+{{FINISH}} Executing Finished, the full log 'precheck.log' can be found in '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/precheck_results/02_SEP_2023___16_28_24/logs'
+{{FAILURE}} 1 Check(s) Failed: ['Consistency'] !!!
+Generating LALR tables
+WARNING: 183 shift/reduce conflicts
+make: *** [Makefile:222: run-precheck] Error 2

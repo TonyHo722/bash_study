@@ -1,0 +1,8 @@
+2023-09-03 00:28:10,283 | generate_spef_mapping | INFO | using project_root /SSD2T/debug/d4_caravel_user_project/caravel_user_project
+2023-09-03 00:28:10,283 | generate_spef_mapping | INFO | getting pdk macros ..
+2023-09-03 00:28:10,450 | generate_spef_mapping | INFO | parsing netlist ./verilog/gl/user_project_wrapper.v ..
+2023-09-03 00:28:10,476 | generate_spef_mapping | INFO | comparing macros against pdk macros ..
+2023-09-03 00:28:10,476 | generate_spef_mapping | INFO | found netlist /SSD2T/debug/d4_caravel_user_project/caravel_user_project/verilog/gl/user_proj_example.v for macro user_proj_example
+2023-09-03 00:28:10,476 | generate_spef_mapping | INFO | parsing netlist /SSD2T/debug/d4_caravel_user_project/caravel_user_project/verilog/gl/user_proj_example.v ..
+2023-09-03 00:28:19,046 | generate_spef_mapping | INFO | comparing macros against pdk macros ..
+2023-09-03 00:28:19,154 | generate_spef_mapping | INFO | wrote to env/spef-mapping.tcl

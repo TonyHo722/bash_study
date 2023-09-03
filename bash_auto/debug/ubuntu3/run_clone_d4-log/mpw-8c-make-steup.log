@@ -1,0 +1,124 @@
+if [ -d "/SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel" ]; then\
+	echo "Deleting exisiting /SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel" && \
+	rm -rf /SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel && sleep 2;\
+fi
+Deleting exisiting /SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel
+echo "Installing caravel-lite.."
+Installing caravel-lite..
+git clone -b mpw-8c https://github.com/efabless/caravel-lite /SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel --depth=1
+Cloning into '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel'...
+Note: switching to '1e3103fd5ffa56f72e2b38e804c9c7bb2738e32a'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+export CARAVEL_ROOT=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel && make -f /SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel/Makefile check-env
+make[1]: Entering directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project'
+make[1]: Nothing to be done for 'check-env'.
+make[1]: Leaving directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project'
+export CARAVEL_ROOT=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel && make -f /SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel/Makefile install_mcw
+make[1]: Entering directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project'
+if [ -d "/SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper" ]; then \
+	echo "Deleting exisiting /SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper" && \
+	rm -rf /SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper && sleep 2;\
+fi
+Deleting exisiting /SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper
+Installing mcw-litex-vexriscv..
+Cloning into '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/mgmt_core_wrapper'...
+Note: switching to '453e4cca7d165db005492cd1a93a3a8aed710e2b'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+Updating files:  13% (111/794)Updating files:  14% (112/794)Updating files:  15% (120/794)Updating files:  16% (128/794)Updating files:  17% (135/794)Updating files:  18% (143/794)Updating files:  19% (151/794)Updating files:  20% (159/794)Updating files:  21% (167/794)Updating files:  22% (175/794)Updating files:  23% (183/794)Updating files:  24% (191/794)Updating files:  25% (199/794)Updating files:  26% (207/794)Updating files:  26% (210/794)Updating files:  27% (215/794)Updating files:  27% (219/794)Updating files:  28% (223/794)Updating files:  29% (231/794)Updating files:  29% (237/794)Updating files:  30% (239/794)Updating files:  30% (244/794)Updating files:  31% (247/794)Updating files:  31% (250/794)Updating files:  32% (255/794)Updating files:  32% (261/794)Updating files:  33% (263/794)Updating files:  34% (270/794)Updating files:  35% (278/794)Updating files:  36% (286/794)Updating files:  37% (294/794)Updating files:  38% (302/794)Updating files:  39% (310/794)Updating files:  39% (311/794)Updating files:  40% (318/794)Updating files:  40% (320/794)Updating files:  41% (326/794)Updating files:  42% (334/794)Updating files:  43% (342/794)Updating files:  44% (350/794)Updating files:  44% (354/794)Updating files:  45% (358/794)Updating files:  45% (361/794)Updating files:  46% (366/794)Updating files:  46% (373/794)Updating files:  47% (374/794)Updating files:  48% (382/794)Updating files:  48% (384/794)Updating files:  49% (390/794)Updating files:  49% (391/794)Updating files:  50% (397/794)Updating files:  50% (402/794)Updating files:  51% (405/794)Updating files:  51% (410/794)Updating files:  52% (413/794)Updating files:  53% (421/794)Updating files:  54% (429/794)Updating files:  55% (437/794)Updating files:  56% (445/794)Updating files:  57% (453/794)Updating files:  57% (456/794)Updating files:  58% (461/794)Updating files:  59% (469/794)Updating files:  60% (477/794)Updating files:  61% (485/794)Updating files:  62% (493/794)Updating files:  63% (501/794)Updating files:  64% (509/794)Updating files:  65% (517/794)Updating files:  65% (521/794)Updating files:  66% (525/794)Updating files:  66% (527/794)Updating files:  67% (532/794)Updating files:  68% (540/794)Updating files:  69% (548/794)Updating files:  70% (556/794)Updating files:  71% (564/794)Updating files:  72% (572/794)Updating files:  73% (580/794)Updating files:  74% (588/794)Updating files:  75% (596/794)Updating files:  76% (604/794)Updating files:  77% (612/794)Updating files:  78% (620/794)Updating files:  79% (628/794)Updating files:  80% (636/794)Updating files:  81% (644/794)Updating files:  82% (652/794)Updating files:  83% (660/794)Updating files:  84% (667/794)Updating files:  85% (675/794)Updating files:  86% (683/794)Updating files:  87% (691/794)Updating files:  88% (699/794)Updating files:  89% (707/794)Updating files:  90% (715/794)Updating files:  91% (723/794)Updating files:  92% (731/794)Updating files:  93% (739/794)Updating files:  94% (747/794)Updating files:  95% (755/794)Updating files:  96% (763/794)Updating files:  97% (771/794)Updating files:  98% (779/794)Updating files:  99% (787/794)Updating files: 100% (794/794)Updating files: 100% (794/794), done.
+make[1]: Leaving directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project'
+cd openlane && make openlane
+make[1]: Entering directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane'
+if [ -d "/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src" ]; then\
+	echo "Deleting exisiting /SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src" && \
+	rm -rf /SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src && sleep 2; \
+	fi
+Deleting exisiting /SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src
+git clone https://github.com/The-OpenROAD-Project/OpenLane -b 2022.11.19 --depth=1 /SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src && \
+	cd /SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src && \
+	export OPENLANE_IMAGE_NAME=efabless/openlane:2022.11.19 && \
+	export IMAGE_NAME=efabless/openlane:2022.11.19 && \
+	make pull-openlane
+Cloning into '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src'...
+Note: switching to 'cb59d1f84deb5cedbb5b0a3e3f3b4129a967c988'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+make[2]: Entering directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src'
+Makefile:23: warning: undefined variable 'DOCKER_SWAP'
+Makefile:26: warning: undefined variable 'DOCKER_MEMORY'
+Makefile:42: warning: undefined variable 'ROUTING_CORES'
+Makefile:69: warning: undefined variable 'STD_CELL_LIBRARY'
+2022.11.19: Pulling from efabless/openlane
+Digest: sha256:658754c4b314437f770c0920ec354267317a86bebbf628b7a4b6b8cac95d3cac
+Status: Image is up to date for efabless/openlane:2022.11.19
+docker.io/efabless/openlane:2022.11.19
+make[2]: Leaving directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/dependencies/openlane_src'
+make[1]: Leaving directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project/openlane'
+export CARAVEL_ROOT=/SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel && make -f /SSD2T/debug/d4_caravel_user_project/caravel_user_project/caravel/Makefile pdk-with-volare
+make[1]: Entering directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project'
+python3 -m pip install --upgrade volare
+Requirement already satisfied: volare in /home/tonyho/miniconda3/lib/python3.9/site-packages (0.12.3)
+Requirement already satisfied: click<9,>=8.0.0 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from volare) (8.1.3)
+Requirement already satisfied: requests<3,>=2.27.0 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from volare) (2.28.2)
+Requirement already satisfied: pcpp<2,>=1.2 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from volare) (1.30)
+Requirement already satisfied: pyyaml<7,>=5 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from volare) (6.0)
+Requirement already satisfied: rich<13,>=12 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from volare) (12.6.0)
+Requirement already satisfied: zstandard<1,>=0.19.0 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from volare) (0.21.0)
+Requirement already satisfied: certifi>=2017.4.17 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from requests<3,>=2.27.0->volare) (2021.5.30)
+Requirement already satisfied: idna<4,>=2.5 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from requests<3,>=2.27.0->volare) (2.10)
+Requirement already satisfied: urllib3<1.27,>=1.21.1 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from requests<3,>=2.27.0->volare) (1.26.6)
+Requirement already satisfied: charset-normalizer<4,>=2 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from requests<3,>=2.27.0->volare) (3.0.1)
+Requirement already satisfied: pygments<3.0.0,>=2.6.0 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from rich<13,>=12->volare) (2.14.0)
+Requirement already satisfied: commonmark<0.10.0,>=0.9.0 in /home/tonyho/miniconda3/lib/python3.9/site-packages (from rich<13,>=12->volare) (0.9.1)
+Version 0059588eebfc704681dc2368bd1d33d96281d10f enabled for the sky130 PDK.
+make[1]: Leaving directory '/SSD2T/debug/d4_caravel_user_project/caravel_user_project'
+Already up to date.
+. ./venv/bin/activate && \
+	python3 -m pip install --upgrade pip && \
+	python3 -m pip install -r /SSD2T/debug/d4_caravel_user_project/caravel_user_project/deps/timing-scripts/requirements.txt && \
+	deactivate
+Requirement already satisfied: pip in ./venv/lib/python3.9/site-packages (23.2.1)
+Requirement already satisfied: click in ./venv/lib/python3.9/site-packages (from -r /SSD2T/debug/d4_caravel_user_project/caravel_user_project/deps/timing-scripts/requirements.txt (line 1)) (8.1.7)
