@@ -1,0 +1,66 @@
+#!/bin/bash
+
+set -x # echo on for debug 
+
+# setup your main floder(MF)
+#export MF=/home/tonyho/workspace/debug/d3_caravel_user_project
+export MF=/SSD2T/debug/d4_caravel_user_project
+
+# setup your log floder(LF)
+export LF=$MF/log-no-cd-no-export-SIM
+# setup your caravel-lab floder(CLF)
+export CLF=$MF/caravel-lab
+# setup your caravel_user_project floder(CUPF)
+export CUPF=$MF/caravel_user_project
+
+cd $MF
+if [ ! -d "$MF" ] ;
+then
+    echo "$MF not exist, please create it"
+    exit 1
+fi    
+
+[ ! -d $LF ] && echo "$LF not exist, create it" && mkdir $LF
+[ ! -d $CLF ] && echo "$CLF not exist, git clone it" && git clone https://github.com/bol-edu/caravel-lab
+[ ! -d $CUPF ] && echo "$CUPF not exist, git clone it" && git clone -b mpw-8c https://github.com/efabless/caravel_user_project
+
+cd $CUPF
+git log -1 2>&1 | tee $LF/mpw-8c-git-log.log
+mkdir dependencies
+export OPENLANE_ROOT=$(pwd)/dependencies/openlane_src
+export PDK_ROOT=$(pwd)/dependencies/pdks
+export PDK=sky130A
+
+make setup 2>&1 | tee $LF/mpw-8c-make-steup.log
+
+# Run RTL simulation
+cp $CLF/custom_design/gcd/user_proj_example/user_proj_example.v $CUPF/verilog/rtl/user_proj_example.v
+cp $CLF/custom_design/gcd/verify-la_test1-rtl/la_test1.c $CUPF/verilog/dv/la_test1/la_test1.c
+cp $CLF/custom_design/gcd/verify-la_test1-rtl/la_test1_tb.v $CUPF/verilog/dv/la_test1/la_test1_tb.v
+make simenv 2>&1 | tee $LF/mpw-8c-simenv.log
+#export SIM=RTL
+make verify-la_test1-rtl 2>&1 | tee $LF/mpw-8c-verify-la_test1-rtl.log
+
+# Run Openlane to generate RTL netlist
+cp $CLF/custom_design/gcd/user_proj_example/config.json $CUPF/openlane/user_proj_example/config.json
+#cd openlane
+make user_proj_example 2>&1 | tee $LF/mpw-8c-user_proj_example.log
+make user_project_wrapper 2>&1 | tee $LF/mpw-8c-user_project_wrapper.log
+
+# Run gate level simulation (it will take 2~3 hours@i9/64GB)
+#cd ..
+#export SIM=GL
+make verify-la_test1-gl 2>&1 | tee $LF/mpw-8c-verify-la_test1-gl.log
+
+# Run gate level static timing verifier
+make setup-timing-scripts 2>&1 | tee $LF/mpw-8c-setup-timing-scripts.log
+make extract-parasitics 2>&1 | tee $LF/mpw-8c-extract-parasitics.log
+make create-spef-mapping 2>&1 | tee $LF/mpw-8c-create-spef-mapping.log
+make caravel-sta 2>&1 | tee $LF/mpw-8c-caravel-sta.log
+
+# Run MPW precheck
+cp $CLF/custom_design/gcd/mpw_precheck/README.md  $CUPF/README.md
+cp $CLF/custom_design/gcd/mpw_precheck/user_defines.v  $CUPF/verilog/rtl/user_defines.v
+make precheck 2>&1 | tee $LF/mpw-8c-precheck.log
+make run-precheck 2>&1 | tee $LF/mpw-8c-run-precheck.log
+~
