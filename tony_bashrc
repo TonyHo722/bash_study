@@ -1,0 +1,43 @@
+# Tony's .bashrc setting 20230916
+
+# for caravel-lab
+export PATH=$PATH:~/.local/bin
+
+export GIT_EDITOR=vim
+
+## common
+alias gits='git status'
+alias gitst='git stash'
+alias gitb='git branch'
+alias gitbd='git branch -d'
+alias gitba='git branch -a'
+alias gitbav='git branch -a -v'
+alias gitd='git diff'
+alias gitr='git remote -v'
+alias gitl='git log -5'
+alias gitln='git log --name-status'
+alias gitl1='git log -1'
+alias gitl1n='git log -1 --name-status'
+alias gitl5='git log --oneline -5'
+alias gitl20='git log --oneline -20'
+alias gitldog='git log --decorate --oneline --graph'
+alias gitladog='git log --all --decorate --oneline --graph'
+
+alias cd..='cd ..'
+
+## Linux only
+
+alias export2022='export | grep "2022"'
+alias sb='source ~/.bashrc'
+alias sbt='source ~/.bashrc_tony'
+alias vib='vi ~/.bashrc'
+alias catb='cat ~/.bashrc'
+alias catbg='cat ~/.bashrc | grep'
+alias vit='vi ~/.bashrc_tony'
+
+alias l='ls'
+alias lm='ls -l | more'
+alias lsd='ls -d */'
+alias md='mkdir'
+alias rd='rmdir'
+
