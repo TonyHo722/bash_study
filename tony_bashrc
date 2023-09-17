@@ -40,4 +40,5 @@ alias lm='ls -l | more'
 alias lsd='ls -d */'
 alias md='mkdir'
 alias rd='rmdir'
+alias gitbp='pushd .;cd ~/workspace/bash_study;git pull;popd'
 
