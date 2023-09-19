@@ -1,4 +1,4 @@
-# Tony's .bashrc setting 20230916
+# Tony's .bashrc setting 20230919
 
 # for caravel-lab
 export PATH=$PATH:~/.local/bin
@@ -11,7 +11,7 @@ alias gitst='git stash'
 alias gitb='git branch'
 alias gitbd='git branch -d'
 alias gitba='git branch -a'
-alias gitbav='git branch -a -v'
+alias gitbva='git branch -v -a'
 alias gitd='git diff'
 alias gitr='git remote -v'
 alias gitl='git log -5'
@@ -31,6 +31,8 @@ alias export2022='export | grep "2022"'
 alias sb='source ~/.bashrc'
 alias sbt='source ~/.bashrc_tony'
 alias vib='vi ~/.bashrc'
+alias vitb='vi ~/workspace/bash_study/tony_bashrc'
+
 alias catb='cat ~/.bashrc'
 alias catbg='cat ~/.bashrc | grep'
 alias vit='vi ~/.bashrc_tony'
