@@ -1,0 +1,1 @@
+copy tony_doskey d:\bashrc
