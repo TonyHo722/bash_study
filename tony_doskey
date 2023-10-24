@@ -14,4 +14,6 @@ gitl5=git log --oneline -5
 gitl20=git log --oneline -20
 gitldog=git log --decorate --oneline --graph
 gitladog=git log --all --decorate --oneline --graph
+gitlafn=git log --all --full-history --name-status
+
 

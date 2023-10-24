@@ -23,6 +23,7 @@ alias gitl5='git log --oneline -5'
 alias gitl20='git log --oneline -20'
 alias gitldog='git log --decorate --oneline --graph'
 alias gitladog='git log --all --decorate --oneline --graph'
+alias gitlafn='git log --all --full-history --name-status'
 alias gitp='git pull'
 
 alias cd..='cd ..'
