@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo 'one\ntwo\nthree\c' > file-single-guote.txt
+echo -e 'one\ntwo\nthree\c' > file-single-guote-e.txt
+echo "one\ntwo\nthree\c" > file-double-guotes.txt
+echo -e "one\ntwo\nthree\c" > file-double-guotes-e.txt
+echo " "
+
+echo "# execution echo 'one\ntwo\nthree\c' > file-single-guote.txt"
+echo "# result in below"
+cat file-single-guote.txt
+echo " "
+
+echo '# execution echo "one\ntwo\nthree\c" > file-double-guotes.txt'
+echo "# result in below"
+cat file-double-guotes.txt
+echo " "
+
+echo "# execution echo -e 'one\ntwo\nthree\c' > file-single-guote-e.txt"
+echo "# result in below"
+cat file-single-guote-e.txt
+echo " "
+
+echo '# execution echo -e "one\ntwo\nthree\c" > file-double-guotes-e.txt'
+echo "# result in below"
+cat file-double-guotes-e.txt
+echo " "
+
+
