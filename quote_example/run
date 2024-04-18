@@ -1,0 +1,112 @@
+#!/bin/bash
+# refernce - https://stackoverflow.com/questions/6697753/what-are-the-differences-between-single-and-double-quotes-in-bash
+echo ""
+a=apple
+arr=(apple)
+
+VAR=1
+echo "example $VAR"
+echo "$a"
+echo ""
+
+VAR=2
+echo "example $VAR"
+echo '$a'
+echo ""
+
+VAR=3
+echo "example $VAR"
+echo "'$a'"
+echo ""
+
+VAR=4
+echo "example $VAR"
+echo '"$a"'
+echo ""
+
+VAR=5
+echo "example $VAR"
+echo 'it is invalid and cause srcipt stop, I can try it here'
+echo ""
+
+VAR=6
+echo "example $VAR"
+echo "red$arocks"
+echo ""
+
+VAR=7
+echo "example $VAR"
+echo "redapple$"
+echo ""
+
+VAR=8
+echo "example $VAR"
+echo '\"'
+echo ""
+
+VAR=9
+echo "example $VAR"
+echo "\'"
+echo ""
+
+VAR=10
+echo "example $VAR"
+echo "\""
+echo ""
+
+VAR=11
+echo "example $VAR"
+echo "*"
+echo ""
+
+VAR=12
+echo "example $VAR"
+echo "\t\n"
+echo ""
+
+VAR=13
+echo "example $VAR"
+echo "`echo hi`"
+echo ""
+
+VAR=14
+echo "example $VAR"
+echo '`echo hi`'
+echo ""
+
+VAR=15
+echo "example $VAR"
+echo '${arr[0]}'
+echo ""
+
+VAR=16
+echo "example $VAR"
+echo "${arr[0]}"
+echo ""
+
+VAR=17
+echo "example $VAR"
+echo $'$a\''
+echo ""
+
+VAR=18
+echo "example $VAR"
+echo "$'\t'"
+echo ""
+
+VAR=19
+echo "example $VAR"
+echo '!cmd'
+echo ""
+
+VAR=20
+echo "example $VAR"
+echo "!cmd"
+echo ""
+
+VAR=21
+echo "example $VAR"
+echo $'!cmd'
+echo ""
+
+
