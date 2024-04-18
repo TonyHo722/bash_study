@@ -1,0 +1,1 @@
+echo 'All sorts of things are ignored in single quotes, like $ & * ; |.'
