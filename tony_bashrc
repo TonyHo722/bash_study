@@ -1,4 +1,4 @@
-# Tony's .bashrc setting 20230919
+# Tony's .bashrc setting 20240104
 
 # for caravel-lab
 export PATH=$PATH:~/.local/bin
@@ -13,6 +13,7 @@ alias gitbd='git branch -d'
 alias gitba='git branch -a'
 alias gitbva='git branch -v -a'
 alias gitd='git diff'
+alias gitdn='git diff --name-status'
 alias gitr='git remote -v'
 alias gitl='git log -5'
 alias gitlp='git log -p'
@@ -47,3 +48,8 @@ alias md='mkdir'
 alias rd='rmdir'
 alias gitbp='pushd .;cd ~/workspace/bash_study;git pull;popd'
 
+alias cdbash='cd ~/workspace/bash_study'
+alias cdlab='cd ~/workspace/fsic/caravel-lab'
+alias cdsoc='cd ~/workspace/fsic/caravel-soc'
+alias cdfpga='cd ~/workspace/fsic/fsic_fpga'
+alias cdasic='cd ~/workspace/fsic/fsic_asic'
