@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "cat run"
+cat run
+echo " "
+echo "$(echo "double-quote")"
+echo '$(echo "single-quote")'

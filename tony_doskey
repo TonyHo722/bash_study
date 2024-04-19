@@ -7,6 +7,7 @@ gitba=git branch -a
 gitbva=git branch -v -a
 gitr=git remote -v
 gitl=git log -5
+gitlp=git log -p
 gitln=git log --name-status
 gitl1=git log -1
 gitl1n=git log -1 --name-status
@@ -15,5 +16,6 @@ gitl20=git log --oneline -20
 gitldog=git log --decorate --oneline --graph
 gitladog=git log --all --decorate --oneline --graph
 gitlafn=git log --all --full-history --name-status
+gitp=git pull
 
-
+cd..= cd .. 
