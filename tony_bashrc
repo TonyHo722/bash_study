@@ -33,13 +33,11 @@ alias cd..='cd ..'
 
 alias export2022='export | grep "2022"'
 alias sb='source ~/.bashrc'
-alias sbt='source ~/.bashrc_tony'
 alias vib='vi ~/.bashrc'
 alias vitb='vi ~/workspace/bash_study/tony_bashrc'
 
 alias catb='cat ~/.bashrc'
 alias catbg='cat ~/.bashrc | grep'
-alias vit='vi ~/.bashrc_tony'
 
 alias l='ls'
 alias lm='ls -l | more'
@@ -47,6 +45,7 @@ alias lsd='ls -d */'
 alias md='mkdir'
 alias rd='rmdir'
 alias gitbp='pushd .;cd ~/workspace/bash_study;git pull;popd'
+alias pspts='ps aux | grep pts'
 
 alias cdbash='cd ~/workspace/bash_study'
 alias cdlab='cd ~/workspace/fsic/caravel-lab'
